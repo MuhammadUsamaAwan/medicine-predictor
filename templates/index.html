@@ -31,13 +31,13 @@
             </select>
           </div>
           <div class="col">
-            <label for="steps" class="form-label">Steps</label>
+            <label for="steps" class="form-label">No of Months</label>
             <input
               type="number"
               class="form-control"
               name="steps"
               id="steps"
-              placeholder="Enter Steps"
+              placeholder="Enter No of Months"
               style="padding-top: 1px; padding-bottom: 1px; border-color: #aaa"
               min="0"
               max="2500"
@@ -49,7 +49,8 @@
     </section>
 
     <section id="plot-section" class="mt-3">
-      <img src="{{ href }}" alt="plot" class="img-fluid" />
+      <img src="{{ trend }}" alt="trenwise" class="img-fluid mb-3" />
+      <img src="{{ forcast }}" alt="forcast" class="img-fluid" />
     </section>
 
     <script>
