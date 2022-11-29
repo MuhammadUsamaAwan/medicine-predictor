@@ -35,7 +35,7 @@ def predict(medicine, step):
     value = value.set_index(value['PERIOD'])
     y = value['CONSUMPTION QUANTITY'].resample('M').mean()
     rcParams['figure.figsize'] = 12, 8
-    decomposition = sm.tsa.seasonal_decompose(value['CONSUMPTION QUANTITY'], model='multiplicative', period=12, extrapolate_trend=12)
+    decomposition = sm.tsa.seasonal_decompose(value['CONSUMPTION QUANTITY'], model='multiplicative', period=1, extrapolate_trend=1)
     decomposition.plot()
     plt.savefig("./static/trendwise.svg")
     plt.switch_backend('agg')
